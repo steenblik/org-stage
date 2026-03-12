@@ -38,6 +38,7 @@ module "organization" {
     (local.organization_tf_sa_iam_email) = [
       "roles/billing.admin",
       "roles/iam.organizationRoleAdmin",
+      "roles/iam.serviceAccountAdmin",
       "roles/orgpolicy.policyAdmin",
       ## From here down should probably be authoratitive
       "roles/essentialcontacts.admin",
