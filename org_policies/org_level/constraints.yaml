@@ -17,3 +17,8 @@ storage.publicAccessPrevention:
 storage.uniformBucketLevelAccess:
   rules:
     - enforce: true
+
+compute.vmExternalIpAccess:
+  rules:
+    - deny:
+        all: true
