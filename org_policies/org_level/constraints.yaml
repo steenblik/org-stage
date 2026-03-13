@@ -9,3 +9,11 @@ gcp.resourceLocations:
 compute.skipDefaultNetworkCreation:
   rules:
     - enforce: true
+
+storage.publicAccessPrevention:
+  rules:
+    - enforce: true
+
+storage.uniformBucketLevelAccess:
+  rules:
+    - enforce: true
