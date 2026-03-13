@@ -34,6 +34,7 @@ module "organization" {
     org_policies = "org_policies/org_level"
   }
 
+  # ***non-authoratitive iam role***
   iam_by_principals_additive = {
     (local.organization_tf_sa_iam_email) = [
       "roles/billing.admin",

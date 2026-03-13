@@ -25,7 +25,7 @@
 
 module "billing-export-dataset" {
   source        = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/bigquery-dataset?ref=v52.0.0"
-  project_id    = "strategic-block-313515"
+  project_id    = var.billing.export_project_id
   id            = "bq_billing_export1"
   friendly_name = "Billing export"
   location      = var.locations.bq
@@ -33,10 +33,10 @@ module "billing-export-dataset" {
 
 module "bigquery-export-service-account" {
   source        = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/iam-service-account?ref=v52.0.0"
-  project_id = var.project_id
+  project_id = var.billing.export_project_id
   name       = "bq-billing-export"
   iam_project_roles = {
-    "${var.project_id}" = [
+    "${var.billing.export_project_id}" = [
       "roles/bigquery.admin",
     ]
   }
