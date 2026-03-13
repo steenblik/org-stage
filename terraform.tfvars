@@ -16,3 +16,4 @@ automation = {
   organization_tf_sa = "terraform@my-project123.iam.gserviceaccount.com"
 }
 
+central_logging_bucket = "projects/my-project123/locations/us-east1/buckets/central_logging_bucket"

@@ -34,6 +34,14 @@ module "organization" {
     org_policies = "org_policies/org_level"
   }
 
+  logging_sinks = {
+    aggregated = {
+      destination = var.central_logging_bucket
+      filter      = ""
+      type        = "logging"
+    }
+  }
+
   # ***non-authoratitive iam role***
   iam_by_principals_additive = {
     (local.organization_tf_sa_iam_email) = [

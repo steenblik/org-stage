@@ -1,3 +1,8 @@
+variable "central_logging_bucket" {
+  description = "The id of the cloud logging bucket used for centralized logging."
+  type = string
+}
+
 variable "billing" {
   description = "Billing related configurations."
   type = object({
