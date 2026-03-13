@@ -5,3 +5,7 @@ gcp.resourceLocations:
        - "in:us-west2-locations"
        - "in:us-west4-locations"
        - "in:us-central1-locations"
+
+compute.skipDefaultNetworkCreation:
+  rules:
+    - enforce: true
