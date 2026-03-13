@@ -32,7 +32,7 @@ module "billing-export-dataset" {
 }
 
 module "bigquery-export-service-account" {
-  source        = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/iam-service-account?ref=v52.0.0"
+  source     = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/iam-service-account?ref=v52.0.0"
   project_id = var.billing.export_project_id
   name       = "bq-billing-export"
   iam_project_roles = {

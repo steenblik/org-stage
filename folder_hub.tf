@@ -1,8 +1,9 @@
 module "folder_hub" {
   source = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/folder?ref=v52.0.0"
 
-  parent = "organizations/${var.organization.id}"
-  name   = "hub"
+  parent        = "organizations/${var.organization.id}"
+  name          = "hub"
+  #folder_create = false
 
   # Authoritative assignment for this role on this folder
   iam = {
