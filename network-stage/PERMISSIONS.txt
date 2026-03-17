@@ -1,0 +1,9 @@
+# Networking SA:
+## Organization
+compute.xpnAdmin
+orgFirewallPolicyAdmin
+serviceusage.serviceUsageConsumer
+compute.networkAdmin (optional if owner granted on project)
+
+## Shared Network Project
+viewer
