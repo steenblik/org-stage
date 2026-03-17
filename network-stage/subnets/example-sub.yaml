@@ -1,0 +1,5 @@
+name: sample-us-west2-subnet
+region: us-west2
+description: Sample description
+ip_cidr_range: 192.168.0.0/24
+enable_private_access: true  # defaults to true

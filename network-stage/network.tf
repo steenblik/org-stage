@@ -1,11 +1,3 @@
-variable "shared_vpc_project_id" {
-  type = string
-}
-
-variable "shared_vpc_name" {
-  type = string
-}
-
 module "shared-vpc" {
   source     = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/net-vpc?ref=v52.0.0"
   project_id = var.shared_vpc_project_id
@@ -13,7 +5,10 @@ module "shared-vpc" {
   vpc_reuse = {
     use_data_source = true
   }
-  /* To be done
+  factories_config = {
+    subnets_folder = "subnets"
+  }
+  /* Another way
   subnets = [
     for key, config in var.subnet_config : {
       # This subnet name is shared with the subnet name in the service-project org_policies block
