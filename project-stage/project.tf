@@ -10,7 +10,7 @@ module "service-project" {
     host_project = var.shared_vpc_host_project_id
   }
 
-org_policies = {
+  org_policies = {
     "compute.restrictSharedVpcSubnetworks" = {
       rules = [{
         allow = {

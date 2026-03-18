@@ -15,7 +15,4 @@ variable "project_config" {
 variable "subnet_restriction" {
   description = "Set an org policy to restrict access to subnet if variable is set."
   type        = list(string)
-  default = [
-    "projects/excellent-zoo-464112-f6/regions/us-west4/subnetworks/alloydb-net"
-  ]
 }
